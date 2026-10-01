@@ -6,5 +6,61 @@
       "framework": "fastapi",
       "entrypoint": "main:app"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/docs",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/openapi.json",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/movies",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/movies/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/users/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/recommendations",
+      "destination": {
+        "service": "backend"
+      }
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    }
+  ]
 }
