@@ -4,16 +4,7 @@
     "backend": {
       "root": "backend/",
       "framework": "fastapi",
-      "entrypoint": "main:app",
-      "excludeFiles": [
-        "../.venv/**",
-        "../frontend/**",
-        "../tests/**",
-        "../ml/train_model.py",
-        "../ml/model/tfidf_vectorizer.pkl",
-        "../README.md",
-        "../.vscode/**"
-      ]
+      "entrypoint": "main:app"
     }
   }
 }
